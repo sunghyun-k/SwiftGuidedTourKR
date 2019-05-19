@@ -90,7 +90,7 @@ struct Card {
     var rank: Rank
     var suit: Suit
     func simpleDescription() -> String {
-        return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
+        return "\(suit.simpleDescription()) \(rank.simpleDescription()))"
     }
 }
 let threeOfSpades = Card(rank: .three, suit: .spades)
