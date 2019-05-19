@@ -1,6 +1,7 @@
-//: ## Generics
+//: ## 제네릭
 //:
-//: Write a name inside angle brackets to make a generic function or type.
+//: 제네릭 함수나 유형을 만들려면 꺽쇠 괄호(`<>`) 안에 이름을 작성하십시오.
+Write a name inside angle brackets to make a generic function or type.
 //:
 func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
     var result = [Item]()
@@ -9,11 +10,11 @@ func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
     }
     return result
 }
-makeArray(repeating: "knock", numberOfTimes: 4)
+makeArray(repeating: "똑", numberOfTimes: 4)
 
-//: You can make generic forms of functions and methods, as well as classes, enumerations, and structures.
+//: 클래스, 열거형 및 구조체 뿐만 아니라 함수 및 메소드의 제네릭 형태를 만들 수 있습니다.
 //:
-// Reimplement the Swift standard library's optional type
+// Swift 표준 라이브러리의 옵셔널 유형을 재구현하기
 enum OptionalValue<Wrapped> {
     case none
     case some(Wrapped)
@@ -21,7 +22,7 @@ enum OptionalValue<Wrapped> {
 var possibleInteger: OptionalValue<Int> = .none
 possibleInteger = .some(100)
 
-//: Use `where` right before the body to specify a list of requirements—for example, to require the type to implement a protocol, to require two types to be the same, or to require a class to have a particular superclass.
+//: 본문 바로 앞에 `where`를 사용하여 요구 사항들을 지정하십시오. 예를 들어, 유형이 프로토콜을 구현하도록 요구하거나, 두 가지 유형을 동일하게 요구하거나, 클래스가 특정 부모 클래스를 갖도록 요구할 수 있습니다.
 //:
 func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool
     where T.Element: Equatable, T.Element == U.Element
@@ -38,9 +39,9 @@ func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool
 anyCommonElements([1, 2, 3], [3])
 
 //: - Experiment:
-//: Modify the `anyCommonElements(_:_:)` function to make a function that returns an array of the elements that any two sequences have in common.
+//: `anyCommonElements(_:_:)` 함수를 수정하여 두 시퀀스가 공통으로 가지고 있는 원소들의 배열을 반환하는 함수를 만드십시오.
 //:
-//: Writing `<T: Equatable>` is the same as writing `<T> ... where T: Equatable`.
+//: `<T: Equatable>`를 쓰는 것은 `<T> ... where T: Equatable`를 쓰는 것과 같습니다.
 //:
 
 
