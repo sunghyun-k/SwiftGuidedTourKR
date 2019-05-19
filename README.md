@@ -4,4 +4,5 @@ Swift GuidedTour Playground를 한국어로 번역한 자료입니다. 다른 �
 클론이나 다운로드하면 Xcode Playground에서 실행할 수 있습니다.
 
 원문: https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html
+
 한국어판 다운로드하기: https://github.com/sunghyun-k/SwiftGuidedTourKR/archive/master.zip
