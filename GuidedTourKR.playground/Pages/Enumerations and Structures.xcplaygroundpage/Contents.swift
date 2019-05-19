@@ -1,6 +1,6 @@
-//: ## Enumerations and Structures
+//: ## 열거형 및 구조체
 //:
-//: Use `enum` to create an enumeration. Like classes and all other named types, enumerations can have methods associated with them.
+//: `enum`을 사용하여 열거형을 생성하세요. 클래스 및 이름을 가진 유형과 같이 열거형은 연관된 메소드를 가질 수 있습니다.
 //:
 enum Rank: Int {
     case ace = 1
@@ -26,9 +26,10 @@ let ace = Rank.ace
 let aceRawValue = ace.rawValue
 
 //: - Experiment:
-//: Write a function that compares two `Rank` values by comparing their raw values.
+//: `Rank`의 원시 값을 사용해 두 개의 `Rank` 값을 비교하는 함수를 작성해 보십시오.
 //:
-//: By default, Swift assigns the raw values starting at zero and incrementing by one each time, but you can change this behavior by explicitly specifying values. In the example above, `Ace` is explicitly given a raw value of `1`, and the rest of the raw values are assigned in order. You can also use strings or floating-point numbers as the raw type of an enumeration. Use the `rawValue` property to access the raw value of an enumeration case.
+//: 기본적으로 Swift는 원시 값을 0부터 시작하여 1씩 증가하도록 할당합니다. 하지만 값을 명시함으로서 이 동작을 변경할 수 있습니다. 위의 예시처럼, `Ace`에 명시적으로 1이란 원시 값이 주어지면 나머지 원시 값은 순서대로 지정됩니다. `rawValue` 속성을 사용하여 열거형 케이스의 원시 값에 접근합니다.
+By default, Swift assigns the raw values starting at zero and incrementing by one each time, but you can change this behavior by explicitly specifying values. In the example above, `Ace` is explicitly given a raw value of `1`, and the rest of the raw values are assigned in order. You can also use strings or floating-point numbers as the raw type of an enumeration. Use the `rawValue` property to access the raw value of an enumeration case.
 //:
 //: Use the `init?(rawValue:)` initializer to make an instance of an enumeration from a raw value. It returns either the enumeration case matching the raw value or `nil` if there is no matching `Rank`.
 //:
