@@ -10,13 +10,13 @@ enum Rank: Int {
     func simpleDescription() -> String {
         switch self {
             case .ace:
-                return "ace"
+                return "에이스"
             case .jack:
-                return "jack"
+                return "잭"
             case .queen:
-                return "queen"
+                return "퀸"
             case .king:
-                return "king"
+                return "킹"
             default:
                 return String(self.rawValue)
         }
