@@ -1,7 +1,6 @@
 //: ## 제네릭
 //:
 //: 제네릭 함수나 유형을 만들려면 꺽쇠 괄호(`<>`) 안에 이름을 작성하십시오.
-Write a name inside angle brackets to make a generic function or type.
 //:
 func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
     var result = [Item]()
@@ -12,9 +11,9 @@ func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
 }
 makeArray(repeating: "똑", numberOfTimes: 4)
 
-//: 클래스, 열거형 및 구조체 뿐만 아니라 함수 및 메소드의 제네릭 형태를 만들 수 있습니다.
+//: 클래스, 열거형 및 구조체 뿐만 아니라 함수 및 메소드도 제네릭 형태를 만들 수 있습니다.
 //:
-// Swift 표준 라이브러리의 옵셔널 유형을 재구현하기
+// Swift 표준 라이브러리의 옵셔널 유형을 재구현
 enum OptionalValue<Wrapped> {
     case none
     case some(Wrapped)

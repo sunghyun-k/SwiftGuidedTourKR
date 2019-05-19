@@ -5,7 +5,7 @@
 func greet(person: String, day: String) -> String {
     return "안녕하세요 \(person)님, 오늘은 \(day)입니다."
 }
-greet(person: "민규", day: "화요일")
+greet(person: "국진", day: "화요일")
 
 //: - Experiment:
 //: `day` 매개 변수를 제거하세요. 그리고 오늘의 특별 점심 메뉴를 인사말에 포함할 수 있도록 매개 변수를 추가하세요.
@@ -15,7 +15,7 @@ greet(person: "민규", day: "화요일")
 func greet(_ person: String, on day: String) -> String {
     return "안녕하세요 \(person)님, 오늘은 \(day)입니다."
 }
-greet("민준", on: "수요일")
+greet("진영", on: "수요일")
 
 //: 튜플을 사용하여 다중 값을 만듭니다. 예를 들어, 함수에서 여러 값을 반환할 경우에 사용할 수 있습니다. 튜플의 원소는 이름 또는 숫자로 참조할 수 있습니다.
 //:
@@ -88,7 +88,7 @@ numbers.map({ (number: Int) -> Int in
 //: - Experiment:
 //: 모든 홀수에 대해 0을 반환하도록 클로저를 다시 작성해보십시오.
 //:
-//: 클로저를 보다 간결하게 작성할 수 있는 몇가지 방법이 있습니다. 클로저의 유형이 이미 알려지면 매개 변수의 유형, 반환 유형, 또는 둘 다를 생략할 수 있습니다. 함수의 인자로 다른 함수가 들어간 경우처럼 말이죠. 단일 명령문 클로저는 `return`을 적지 않아도 명령문의 유일한 값을 반환합니다.
+//: 클로저를 보다 간결하게 작성할 수 있는 몇가지 방법이 있습니다. 클로저의 유형이 이미 알려지면 매개 변수의 유형, 반환 유형, 또는 둘 다를 생략할 수 있습니다. 함수의 인자로 다른 함수가 들어간 경우처럼 말이죠. 단일 표현식의 클로저는 `return`을 적지 않아도 표현식의 유일한 값을 반환합니다.
 //:
 let mappedNumbers = numbers.map({ number in 3 * number })
 print(mappedNumbers)

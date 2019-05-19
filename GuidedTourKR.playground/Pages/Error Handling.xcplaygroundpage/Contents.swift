@@ -32,12 +32,12 @@ do {
 //: 특정 오류를 처리하는 여러 `catch` 블럭을 제공할 수도 있습니다. 스위치의 `case`에 했던것 처럼 `catch` 다음에 패턴을 작성하면 됩니다.
 //:
 do {
-    let printerResponse = try send(job: 1440, toPrinter: "Gutenberg")
+    let printerResponse = try send(job: 1440, toPrinter: "구텐베르크")
     print(printerResponse)
 } catch PrinterError.onFire {
-    print("I'll just put this over here, with the rest of the fire.")
+    print("이건 그냥 여기 불 옆에 둬야겠어.")
 } catch let printerError as PrinterError {
-    print("Printer error: \(printerError).")
+    print("프린터 오류: \(printerError).")
 } catch {
     print(error)
 }
