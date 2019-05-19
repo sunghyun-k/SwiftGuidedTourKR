@@ -37,7 +37,7 @@ let nickName: String? = nil
 let fullName: String = "박준희"
 let informalGreeting = "안녕 \(nickName ?? fullName)"
 
-//: 스위치 문은 모든 종류의 데이터를 지원하며 다양한 비교 연산을 지원합니다. 정수나 비교 연산에 국한되지 않습니다.
+//: 스위치 문은 모든 종류의 데이터를 지원하며 다양한 비교 연산을 지원합니다. 정수나 동등 연산에 국한되지 않습니다.
 //:
 let vegetable = "빨간 고추"
 switch vegetable {
